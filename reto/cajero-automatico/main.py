@@ -7,9 +7,7 @@ cliente = None
 while not cliente:
     usuario = input("Bienvenido. ¿De quien es la cuenta que desea iniciar las operaciones?: ")
     cliente = cajero.buscarCliente(usuario)
-   
-
-
+    
 while opcion != 3:
 
     if cliente:
@@ -26,27 +24,8 @@ while opcion != 3:
             cantidad = int(input("Cuanto dinero quiere ingresar?: "))
             cajero.ingresar(cliente, cantidad)
         elif opcion == 3:
-            cajero.salir
+            cajero.salir()
         else:
             print("Opción no válida")
     else:
         print("El nombre ingresado no está registrado en el cajero")
-
-    
-    
-'''
-    Banco - elegir banco
-    cajero automático tiene 1000 iniciales
-
-
-    cliente
-        depositar
-        extraer
-        salir
-    
-    
-        elegir el banco
-        elegir si operar o ver depósito
-        para operar elegir cliente
-    
-'''
